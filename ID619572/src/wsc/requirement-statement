@@ -1,0 +1,18 @@
+1. Functional requirements
+System shall display the list of products
+System shall allow users to buy products
+System shall allow users search products
+System shall allow users to add products to cart
+System shall store users' personal information and card information
+System shall integrate with credit card service
+System shall allow users to write products reviews
+System shall allow staffs to manage products
+System shall allow staffs to generate reports
+System shall integrate with the existing order application
+2. Non-functional requirements
+Shopping cart shall be friendly
+UI shall be friendly
+System shall be Secured
+System shall be scalable
+System shall be cost-efficiency
+System shall have a good performance
