@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/codepipeline-react" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/maven-starter-for-ec2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nodejs-docker-k8s" vcs="Git" />
   </component>
 </project>

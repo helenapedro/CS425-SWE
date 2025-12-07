@@ -1,0 +1,25 @@
+What I changed and why (Clean Code reasoning)
+    1. Meaningful names:
+        - CartLine → CartItem,
+        - getT() → totalPrice(),
+        - productnumber → productNumber.
+    2. Single Responsibility + small methods:
+        - removed the action(Product, String) method (which mixed add/remove/print behavior
+        and used stringly-typed commands).
+        - replaced it with explicit addProduct, removeProduct, printContents. Each method does one clear thing.
+    3. Product is immutable:
+        - made Product fields final, removed setters.
+    4. Money correctness:
+        - switched to BigDecimal for price arithmetic to avoid floating-point rounding issues.
+    5. Encapsulation:
+        - CartItem encapsulates the logic about changing quantity (incrementQuantity, decrementQuantity)
+        so the cart does not manipulate quantities directly.
+    6. Defensive programming:
+        - constructors and public methods validate arguments and throw IllegalArgumentException when called
+        with invalid input (null product, zero quantities).
+    7. Avoid magic strings:
+        - removed string commands like "add", "remove", "print".
+    8. Small helper method for lookup:
+        - findByProductNumber returns an Optional<CartItem>;
+    9. toString / equals / hashCode:
+        - added useful toString and proper equals/hashCode for Product and CartItem.
