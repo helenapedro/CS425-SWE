@@ -3,10 +3,10 @@ spring:
     name: student-aop
 
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${SPRING_DATASOURCE_URL_STUDENTMGM}
+    username: ${SPRING_DATASOURCE_STUDENT_USERNAME}
+    password: ${SPRING_DATASOURCE_STUDENT_PASSWORD}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME}
 
   jpa:
     hibernate:
@@ -20,8 +20,3 @@ spring:
     enabled: false
   jwt:
     secret: ${JWT_SECRET}
-  logging:
-    level:
-      com:
-        pedro:
-          studentaop: INFO
