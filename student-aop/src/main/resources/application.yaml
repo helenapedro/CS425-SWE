@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: student-aop
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+  flyway:
+    enabled: false
+  jwt:
+    secret: ${JWT_SECRET}
+  logging:
+    level:
+      com:
+        pedro:
+          studentaop: INFO

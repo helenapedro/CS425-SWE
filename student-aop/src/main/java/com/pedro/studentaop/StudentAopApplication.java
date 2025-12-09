@@ -10,7 +10,6 @@ import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration;
 
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class StudentAopApplication implements CommandLineRunner {
-
     @Autowired
     private StudentService studentService;
 

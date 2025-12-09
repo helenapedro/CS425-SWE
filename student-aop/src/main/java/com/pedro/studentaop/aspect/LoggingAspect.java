@@ -19,11 +19,11 @@ public class LoggingAspect {
 
     @After("execution(* com.pedro.studentaop.service.StudentService.*(..))")
     public void afterMethod(JoinPoint joinPoint) {
-        System.out.println("[AOP-AFTER] finished: " + joinPoint.getSignature());
+        log.info("[AOP-AFTER] finished: {}", joinPoint.getSignature());
     }
 
     @AfterReturning(pointcut = "execution(* com.pedro.studentaop.service.StudentService.getAllStudents(..))", returning = "ret")
     public void afterReturningGetAll(JoinPoint jp, Object ret) {
-        System.out.println("[AOP-RETURNING] getAllStudents returned " + ret);
+        log.info("[AOP-RETURNING] getAllStudents returned: {}", ret);
     }
 }
