@@ -22,9 +22,10 @@ public class Classroom {
     private String buildingName;
     private String roomNumber;
 
-    @OneToMany(mappedBy = "classroom", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "classroom", cascade = CascadeType.ALL)
     @Builder.Default
     private List<Student> students = new ArrayList<>();
+
 
     public void addStudent(Student s) {
         students.add(s);
