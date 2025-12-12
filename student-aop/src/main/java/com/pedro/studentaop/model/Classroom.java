@@ -1,5 +1,6 @@
 package com.pedro.studentaop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,8 +23,9 @@ public class Classroom {
     private String buildingName;
     private String roomNumber;
 
-    @OneToMany(mappedBy = "classroom", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "classroom", cascade = CascadeType.PERSIST)
     @Builder.Default
+    @JsonIgnore
     private List<Student> students = new ArrayList<>();
 
 

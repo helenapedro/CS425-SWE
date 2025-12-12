@@ -1,5 +1,6 @@
 package com.pedro.studentaop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,5 +23,6 @@ public class Transcript {
 
     @OneToOne(mappedBy = "transcript")
     @ToString.Exclude
+    @JsonIgnore
     private Student student;
 }

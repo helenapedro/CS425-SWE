@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "510eab8e-a1e1-4e48-86bb-c45eda3c93f9",
+		"name": "Homework10c",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29223123",
+		"_collection_link": "https://deeabank.postman.co/workspace/SWE-Homework~ee563c49-f122-46c0-997a-3e1aabba7907/collection/29223123-510eab8e-a1e1-4e48-86bb-c45eda3c93f9?action=share&source=collection_link&creator=29223123"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "student/id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"studentNumber\": \"111-62-0003\",\r\n  \"firstName\": \"John\",\r\n  \"middleName\": \"Maria\",\r\n  \"lastName\": \"Brown\",\r\n  \"cgpa\": 3.75,\r\n  \"dateOfEnrollment\": \"2020-01-15\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/students/11"
+					},
+					"response": []
+				},
+				{
+					"name": "student/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/students/9"
+					},
+					"response": []
+				},
+				{
+					"name": "students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/students"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"studentNumber\": \"111-62-0003\",\r\n  \"firstName\": \"John\",\r\n  \"middleName\": \"Maria\",\r\n  \"lastName\": \"Brown\",\r\n  \"cgpa\": 3.75,\r\n  \"dateOfEnrollment\": \"2020-01-15\"\r\n}\r\n"
+						},
+						"url": "{{baseURL}}/students/11"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transcript",
+			"item": [
+				{
+					"name": "transcripts/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/transcripts/7"
+					},
+					"response": []
+				},
+				{
+					"name": "transcripts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"degreeTitle\": \"BS Accounting\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/transcripts"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "classrooms",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/classrooms/1"
+					},
+					"response": []
+				},
+				{
+					"name": "classrooms/id/students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/classrooms/1/students"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/courses"
+					},
+					"response": []
+				},
+				{
+					"name": "courses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseCode\": \"CS435\",\r\n  \"courseName\": \"Algorithms\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/courses"
+					},
+					"response": []
+				},
+				{
+					"name": "students/id/courses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[7, 8]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/students/9/courses"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
